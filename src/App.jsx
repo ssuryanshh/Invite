@@ -265,14 +265,15 @@ const TOTAL = 4
 export default function App() {
   const [entered, setEntered]       = useState(false)
   const [activePage, setActivePage] = useState(0)
-  const [muted, setMuted]           = useState(true)
+  const [muted, setMuted]           = useState(false)
   const appRef                      = useRef(null)
   const pageRef                     = useRef(0)
   const touchStartX                 = useRef(0)
   const touchStartY                 = useRef(0)
   const enteredRef                  = useRef(false)
+  const audioElRef                  = useRef(null)
 
-  pageRef.current   = activePage
+  pageRef.current    = activePage
   enteredRef.current = entered
 
   const goTo = useCallback((idx) => {
@@ -309,28 +310,28 @@ export default function App() {
     }
   }, [goTo])
 
-  const audioElRef = useRef(null)
+  // Autoplay on first user interaction (opening screen tap)
+  const handleEnter = useCallback(() => {
+    setEntered(true)
+    if (!audioElRef.current) {
+      const audio = new Audio('/music.mp3')
+      audio.loop = true
+      audio.volume = 0.5
+      audioElRef.current = audio
+    }
+    audioElRef.current.play().catch(() => {})
+  }, [])
 
   const toggleMute = useCallback(() => {
     setMuted(m => {
       const next = !m
       if (!next) {
-        if (!audioElRef.current) {
-          const audio = new Audio('/music.mp3')
-          audio.loop = true
-          audio.volume = 0.5
-          audioElRef.current = audio
-        }
-        audioElRef.current.play()
+        audioElRef.current?.play()
       } else {
         audioElRef.current?.pause()
       }
       return next
     })
-  }, [])
-
-  const handleEnter = useCallback(() => {
-    setEntered(true)
   }, [])
 
   return (
