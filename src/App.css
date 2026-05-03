@@ -100,6 +100,14 @@ html, body, #root {
   background: radial-gradient(circle, var(--gold-light), transparent);
   animation: floatUp var(--dur) ease-in var(--delay) infinite;
 }
+.flower-particle {
+  position: absolute; bottom: -20px;
+  line-height: 1;
+  opacity: 0;
+  animation: floatUp var(--dur) ease-in var(--delay) infinite;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(255,180,100,.4));
+}
 
 /* ── PAGE BASE ── */
 .page {

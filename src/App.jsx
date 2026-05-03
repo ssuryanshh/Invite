@@ -53,7 +53,31 @@ function Diya() {
   )
 }
 
-function Divider() { return <div className="divider" /> }
+const FLOWER_PARTICLES = Array.from({ length: 12 }, (_, i) => ({
+  id: i,
+  left:  `${(i * 8.5 + Math.random() * 6).toFixed(1)}%`,
+  dur:   `${6 + (i % 4) * 1.5}s`,
+  delay: `${(i * 0.6) % 6}s`,
+  dx:    `${((i % 2 === 0 ? 1 : -1) * (15 + i * 4))}px`,
+  emoji: ['🌸', '🌺', '🪷', '🌼', '✿'][i % 5],
+  size:  `${14 + (i % 3) * 4}px`,
+}))
+
+function FlowerParticles() {
+  return (
+    <div className="particles">
+      {FLOWER_PARTICLES.map(p => (
+        <div key={p.id} className="flower-particle" style={{
+          left: p.left,
+          fontSize: p.size,
+          '--dur': p.dur,
+          '--delay': p.delay,
+          '--dx': p.dx,
+        }}>{p.emoji}</div>
+      ))}
+    </div>
+  )
+}
 
 function DetailRow({ emoji, label, value }) {
   return (
@@ -93,6 +117,7 @@ function PageInvite({ active, onNext }) {
   return (
     <div className={`page page-invite${active ? ' active' : ''}`}>
       <Particles />
+      <FlowerParticles />
       <div className="inner">
         <div className="mandala-ring">
           <span className="mandala-om">🕉</span>
