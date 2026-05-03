@@ -123,6 +123,7 @@ function PageInvite({ active, onNext }) {
         <div className="mandala-ring">
           <span className="mandala-om">🕉</span>
         </div>
+        <p className="mantra">॥ श्री गणेशाय नमः ॥</p>
         <p className="mantra">॥ श्री राम जय राम जय जय राम ॥</p>
         <div className="invite-block">
           <p className="invite-line a1" style={{ animationFillMode:'both' }}>
@@ -165,7 +166,7 @@ function PageDay1({ active, onBack, onNext }) {
         </div>
         <div className="spiritual-box" style={{ marginTop: 14 }}>
           <p className="spiritual-text">
-            <strong>पितृ पक्ष</strong> के पावन अवसर पर हम अपने पूर्वजों की आत्मा की
+            हम अपने पूर्वजों की आत्मा की
             <strong> शांति एवं मोक्ष</strong> हेतु यह आयोजन कर रहे हैं।
           </p>
         </div>
