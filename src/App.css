@@ -237,23 +237,23 @@ html, body, #root {
 }
 
 .mantra {
-  font-size: clamp(.78rem, 3vw, .92rem);
+  font-size: clamp(1rem, 4vw, 1.2rem);
   color: var(--saffron); letter-spacing: .1em;
-  margin: 14px 0 24px; text-align: center;
+  margin: 8px 0 16px; text-align: center;
 }
 
 .invite-block { text-align: center; width: 100%; }
 .invite-line {
-  font-size: clamp(1rem, 4.2vw, 1.3rem);
+  font-size: clamp(1.15rem, 5vw, 1.5rem);
   color: var(--text-mid); line-height: 2; font-weight: 400;
   opacity: 0; animation: fadeUp .9s ease forwards;
 }
 .invite-line.bold {
-  font-size: clamp(1.2rem, 5.2vw, 1.65rem);
+  font-size: clamp(1.35rem, 6vw, 1.85rem);
   color: var(--text-dark); font-weight: 700;
 }
 .invite-line.sub {
-  font-size: clamp(.9rem, 3.8vw, 1.1rem);
+  font-size: clamp(1.05rem, 4.5vw, 1.3rem);
   color: var(--text-mid); font-weight: 300;
 }
 
