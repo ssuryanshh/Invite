@@ -121,7 +121,7 @@ function PageInvite({ active, onNext }) {
       <FlowerParticles />
       <div className="inner">
         <div className="mandala-ring">
-          <span className="mandala-om">🕉</span>
+          <span className="mandala-om">ॐ</span>
         </div>
         <p className="mantra">॥ श्री गणेशाय नमः ॥</p>
         <p className="mantra">॥ श्री राम जय राम जय जय राम ॥</p>
