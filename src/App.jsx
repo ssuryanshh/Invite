@@ -53,6 +53,8 @@ function Diya() {
   )
 }
 
+function Divider() { return <div className="divider" /> }
+
 const FLOWER_PARTICLES = Array.from({ length: 12 }, (_, i) => ({
   id: i,
   left:  `${(i * 8.5 + Math.random() * 6).toFixed(1)}%`,
