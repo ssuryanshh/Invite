@@ -155,7 +155,7 @@ function PageDay2({ active, onBack, onNext }) {
 
         {/* Purnahuti card */}
         <div className="card">
-          <span className="card-icon">🕏</span>
+          <span className="card-icon">🔥</span>
           <h2 className="card-title">पूर्णाहुति</h2>
           <Divider />
           <p className="card-body">रामायण पाठ की पूर्णाहुति एवं हवन का आयोजन।</p>
