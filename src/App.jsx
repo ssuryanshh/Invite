@@ -118,7 +118,6 @@ function PageOpening({ gone, onEnter }) {
 function PageInvite({ active, onNext }) {
   return (
     <div className={`page page-invite${active ? ' active' : ''}`}>
-      <Particles />
       <FlowerParticles />
       <div className="inner">
         <div className="mandala-ring">
@@ -147,6 +146,7 @@ function PageInvite({ active, onNext }) {
 function PageDay1({ active, onBack, onNext }) {
   return (
     <div className={`page page-day1${active ? ' active' : ''}`}>
+      <FlowerParticles />
       <div className="card-wrap">
         <div className="card">
           <span className="card-icon">📖</span>
@@ -178,6 +178,7 @@ function PageDay1({ active, onBack, onNext }) {
 function PageDay2({ active, onBack, onNext }) {
   return (
     <div className={`page page-day2${active ? ' active' : ''}`}>
+      <FlowerParticles />
       <div className="card-wrap">
 
         {/* Purnahuti card */}
@@ -232,6 +233,7 @@ function PageContact({ active, onBack }) {
   const shareUrl = `https://wa.me/?text=${encodeURIComponent(CONFIG.whatsappMsg)}`
   return (
     <div className={`page page-contact${active ? ' active' : ''}`}>
+      <Particles />
       <div className="contact-wrap">
         <p className="contact-heading">सादर सहयोग एवं सौजन्य से</p>
         <ul className="names-list">
